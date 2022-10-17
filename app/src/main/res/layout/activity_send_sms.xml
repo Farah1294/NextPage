@@ -29,7 +29,7 @@
         />
 
     <EditText
-        android:id="@+id/etsms"
+        android:id="@+id/etSms"
         android:layout_width="372dp"
         android:layout_height="50dp"
         android:layout_marginTop="300dp"
