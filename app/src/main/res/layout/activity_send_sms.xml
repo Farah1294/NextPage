@@ -14,10 +14,25 @@
         />
 
     <EditText
-        android:id="@+id/tvMessage"
+        android:id="@+id/etPhoneNum"
         android:layout_width="372dp"
         android:layout_height="50dp"
-        android:layout_marginTop="498dp"
+        android:layout_marginTop="45dp"
+        android:textColor="#ffff"
+        android:textSize="12dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textColorHint="#fff"
+        android:layout_marginLeft="20dp"
+        android:gravity="start|top"
+
+        />
+
+    <EditText
+        android:id="@+id/etsms"
+        android:layout_width="372dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
         android:background="@drawable/shape"
         android:textColor="#ffff"
         android:textSize="12dp"
