@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,SendSms.class);
         startActivity(intent);
     }
+
+    public void PageReceive(View view) {
+        Intent intent = new Intent(MainActivity.this,ReceiveSms.class);
+        startActivity(intent);
+    }
 }

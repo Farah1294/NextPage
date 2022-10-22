@@ -54,6 +54,7 @@
         android:drawableTop="@drawable/send"
         android:paddingTop="20dp"
         android:textColor="#fff"
+        android:onClick="GoToPageReceiveSms"
 
         />
 

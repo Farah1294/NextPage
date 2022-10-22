@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/USER/AndroidStudioProjects/MyChatting/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/MyChatting/app/src/main/res/layout/activity_receive_sms.xml" value="0.13269927536231885" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/MyChatting/app/src/main/res/layout/activity_send_sms.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/NextPage/app/src/main/res/drawable/circle.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/NextPage/app/src/main/res/drawable/clear.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/NextPage/app/src/main/res/drawable/send.xml" value="0.1" />

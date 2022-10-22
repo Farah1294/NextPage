@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -52,11 +53,13 @@ public class SendSms extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,@NonNull int[] grantResults){
         super.onRequestPermissionsResult(requestCode,permissions,grantResults);
+
         //check condition
         if (requestCode == 100 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             //Permission is granted
             //call method
             sendSMS();
+
         }else {
             //when permission is denied
             //displayn toast msg
@@ -64,7 +67,7 @@ public class SendSms extends AppCompatActivity {
 
         }
 
-}
+    }
 
             private void sendSMS() {
                 //get value from et
@@ -79,7 +82,12 @@ public class SendSms extends AppCompatActivity {
                     smsManager.sendTextMessage(phone,null,message,null,null);
                     //display Toast
 
-                    Toast.makeText(this,"SMS send successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,"Number Phone : "+phone+"\nMessage : "+message, Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(this,ReceiveSms.class);
+                        startActivity(intent);
+
+
                 }else{
                     //when string is empty toast msg
 

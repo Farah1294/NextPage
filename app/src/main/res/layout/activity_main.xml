@@ -35,7 +35,7 @@
         android:layout_marginLeft="230dp"
         android:text="Read"
         android:background="@drawable/shape"
-        android:onClick="PageSend"
+        android:onClick="PageReceive"
         />
 
 

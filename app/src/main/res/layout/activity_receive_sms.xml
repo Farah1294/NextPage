@@ -13,8 +13,8 @@
         layout="@layout/toolbar2"
         />
 
-    <EditText
-        android:id="@+id/tvGetPhoneNum"
+    <TextView
+        android:id="@+id/tvPhoneNum"
         android:layout_width="372dp"
         android:layout_height="50dp"
         android:layout_marginTop="45dp"
@@ -28,8 +28,8 @@
 
         />
 
-    <EditText
-        android:id="@+id/tvGetsms"
+    <TextView
+        android:id="@+id/tvMsg"
         android:layout_width="372dp"
         android:layout_height="50dp"
         android:layout_marginTop="300dp"
