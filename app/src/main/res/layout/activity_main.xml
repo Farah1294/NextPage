@@ -16,31 +16,13 @@
         android:layout_marginTop="30dp"
         app:srcCompat="@drawable/logo1" />
 
-    <Button
-        android:id="@+id/btnSend"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="25dp"
-        android:text="Send"
-        android:background="@drawable/shape"
-        android:onClick="PageSend"
-        />
-
-    <Button
-        android:id="@+id/btnReceive"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-50dp"
-        android:layout_marginLeft="230dp"
-        android:text="Read"
-        android:background="@drawable/shape"
-        android:onClick="PageReceive"
-        />
-
-
-
-
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="78dp"
+        android:layout_height="67dp"
+        android:layout_margin="189dp"
+        android:indeterminateTint="@color/white" />
 
 
 </LinearLayout>
