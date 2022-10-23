@@ -20,12 +20,17 @@ public class ReceiveSms extends AppCompatActivity {
     private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
     TextView tvPhoneNum, tvMsg;
 
+    public final static String PHONENUM ="com.exampe.nextpage.PHONENUM";
+    public final static String MSG  ="com.example.nextpage.MSG";
+
+    //Using by sms delete public static string tu and MSG change to msg and PHONENUM change it to phoneno
+
     MyReceiver receiver = new MyReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             super.onReceive(context, intent);
-            tvMsg.setText(msg);
-            tvPhoneNum.setText(phoneNo);
+            tvMsg.setText(MSG);
+            tvPhoneNum.setText(PHONENUM);
         }
     };
 
@@ -48,6 +53,17 @@ public class ReceiveSms extends AppCompatActivity {
 
         tvPhoneNum = findViewById(R.id.tvPhoneNum);
         tvMsg= findViewById(R.id.tvMsg);
+
+
+        Intent intent = getIntent();
+
+        String strPhoneNum = intent.getStringExtra(PHONENUM);
+        tvPhoneNum = (TextView)findViewById(R.id.tvPhoneNum);
+        tvPhoneNum.setText(strPhoneNum);
+
+        String strMsg = intent.getStringExtra(MSG);
+        tvMsg = (TextView)findViewById(R.id.tvMsg);
+        tvMsg.setText(strMsg);
 
 
         //check if permission is not granted

@@ -17,8 +17,11 @@ public class MyReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsBroadcastReceiver";
     String msg, phoneNo = "";
 
+
     @Override
     public void onReceive(Context context, Intent intent) {
+
+
         //retrives the general action to be performed and display onlog
         Log.i(TAG, "Intent Received: " + intent.getAction());
         if (intent.getAction() == SMS_RECEIVED) {
@@ -37,12 +40,9 @@ public class MyReceiver extends BroadcastReceiver {
                         message[i] = SmsMessage.createFromPdu((byte[]) mypdu[i], format);
                     } else {
                         //<API Level 23
-
                         message[i] = SmsMessage.createFromPdu((byte[]) mypdu[i]);
-
-
                     }
-                    msg = message[i].getMessageBody();
+                    msg= message[i].getMessageBody();
                     phoneNo = message[i].getOriginatingAddress();
                 }
                 Toast.makeText(context,"Message: "+msg+"\nNumber: "+phoneNo,Toast.LENGTH_LONG).show();

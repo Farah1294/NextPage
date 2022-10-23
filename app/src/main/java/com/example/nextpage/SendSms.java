@@ -22,6 +22,9 @@ public class SendSms extends AppCompatActivity {
     EditText etPhoneNumber, etSms;
     Button btnSend, btnClear;
 
+    public final static String PHONENUM ="com.exampe.nextpage.PHONENUM";
+    public final static String MSG  ="com.example.nextpage.MSG";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +87,14 @@ public class SendSms extends AppCompatActivity {
 
                     Toast.makeText(this,"Number Phone : "+phone+"\nMessage : "+message, Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(this,ReceiveSms.class);
+                    String phonenum = etPhoneNumber.getText().toString();
+                    String msg = etSms.getText().toString();
+
+
+
+                    Intent intent = new Intent(this,ReceiveSms.class);
+                        intent.putExtra(PHONENUM,phonenum);
+                        intent.putExtra(MSG,msg);
                         startActivity(intent);
 
 
