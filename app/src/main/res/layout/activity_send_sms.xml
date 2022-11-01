@@ -26,12 +26,19 @@
         android:layout_marginLeft="20dp"
         android:gravity="start|top"
         />
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:textSize="20dp"/>
+
 
     <EditText
         android:id="@+id/etSms"
         android:layout_width="372dp"
         android:layout_height="50dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/shape"
         android:textColor="#ffff"
         android:textSize="20dp"
