@@ -41,6 +41,7 @@ public class SendSms extends AppCompatActivity {
         btnClear = findViewById(R.id.btnClear);
         btnContact = findViewById(R.id.btnContact);
 
+//        Button Contact
         btnContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,9 +50,7 @@ public class SendSms extends AppCompatActivity {
             }
         });
 
-
-
-
+//        Button clear
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +59,7 @@ public class SendSms extends AppCompatActivity {
             }
         });
 
+//        button Send
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,40 +78,6 @@ public class SendSms extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case RESULT_PICK_CONTACT:
-                    contactPicked(data);
-                    break;
-            }
-        } else {
-            Toast.makeText(this, "Failed To pick contact", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void contactPicked(Intent data) {
-        Cursor cursor = null;
-
-        try {
-            String phoneNo = null;
-            Uri uri = data.getData ();
-            cursor = getContentResolver ().query (uri, null, null,null,null);
-            cursor.moveToFirst ();
-            int phoneIndex = cursor.getColumnIndex (ContactsContract.CommonDataKinds.Phone.NUMBER);
-
-            phoneNo = cursor.getString (phoneIndex);
-
-            etPhoneNumber.setText (phoneNo);
-
-
-        } catch (Exception e) {
-            e.printStackTrace ();
-        }
-    }
 
 
     @Override
@@ -132,7 +98,6 @@ public class SendSms extends AppCompatActivity {
         }
 
     }
-
             private void sendSMS() {
                 //get value from et
                 String phone = etPhoneNumber.getText().toString();
@@ -165,8 +130,44 @@ public class SendSms extends AppCompatActivity {
                     Toast.makeText(this,"Please enter phone and message", Toast.LENGTH_SHORT).show();
                 }
             }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            switch (requestCode) {
+                case RESULT_PICK_CONTACT:
+                    contactPicked(data);
+                    break;
+            }
+        } else {
+            Toast.makeText(this, "Failed To pick contact", Toast.LENGTH_SHORT).show();
+        }
+    }
 
-        };
+//    Contact
+    private void contactPicked(Intent data) {
+        Cursor cursor = null;
+
+        try {
+            String phoneNo = null;
+            Uri uri = data.getData ();
+            cursor = getContentResolver ().query (uri, null, null,null,null);
+            cursor.moveToFirst ();
+            int phoneIndex = cursor.getColumnIndex (ContactsContract.CommonDataKinds.Phone.NUMBER);
+
+            phoneNo = cursor.getString (phoneIndex);
+
+            etPhoneNumber.setText (phoneNo);
+
+
+        } catch (Exception e) {
+            e.printStackTrace ();
+        }
+    }
+
+
+};
 
 
 

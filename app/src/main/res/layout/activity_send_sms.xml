@@ -52,9 +52,10 @@
         android:layout_width="77dp"
         android:layout_height="52dp"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:text="Send"
         android:textColor="#fff"
+        app:cornerRadius="20dp"
         />
 
     <Button
@@ -62,20 +63,22 @@
         android:layout_width="85dp"
         android:layout_height="52dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="-55dp"
+        android:layout_marginTop="-50dp"
         android:text="CLEAR"
         android:textColor="#fff"
+        app:cornerRadius="20dp"
 
         />
 
     <Button
         android:id="@+id/btnContact"
-        android:layout_width="85dp"
+        android:layout_width="105dp"
         android:layout_height="52dp"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="-55dp"
         android:text="CONTACT"
         android:textColor="#fff"
+        app:cornerRadius="20dp"
 
         />
 

@@ -40,9 +40,6 @@
         android:inputType="textMultiLine"
         android:textColorHint="#fff"
         android:layout_marginLeft="15dp"
-        android:gravity="start|top"
-
-
-        />
+        android:gravity="start|top"/>
 
 </LinearLayout>
