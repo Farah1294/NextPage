@@ -22,13 +22,8 @@ public class ReceiveSms extends AppCompatActivity {
     private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
     TextView tvPhoneNum, tvMsg;
 
-
     public  static String PHONENUM ="com.exampe.nextpage.PHONENUM";
     public  static String MSG  ="com.example.nextpage.MSG";
-
-
-
-
 
     //Using by sms delete public static string tu and MSG change to msg and PHONENUM change it to phoneno
 
@@ -42,8 +37,6 @@ public class ReceiveSms extends AppCompatActivity {
 //            tvPhoneNum.setText(phoneNo);
         }
     };
-
-
 
     @Override
     protected void onResume() {
