@@ -35,6 +35,14 @@ public class SendSms extends AppCompatActivity {
         btnSend = findViewById(R.id.btnSend);
         btnClear = findViewById(R.id.btnClear);
 
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etPhoneNumber.setText("");
+                etSms.setText("");
+            }
+        });
+
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,6 +112,7 @@ public class SendSms extends AppCompatActivity {
                     Toast.makeText(this,"Please enter phone and message", Toast.LENGTH_SHORT).show();
                 }
             }
+
         };
 
 
