@@ -20,9 +20,8 @@ public class ReceiveSms extends AppCompatActivity {
     //Here in MainActivity asking permission
     private static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 0;
     private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
-//    String msg,phoneNo="";
     TextView tvPhoneNum, tvMsg;
-    Button btnBack;
+
 
     public  static String PHONENUM ="com.exampe.nextpage.PHONENUM";
     public  static String MSG  ="com.example.nextpage.MSG";

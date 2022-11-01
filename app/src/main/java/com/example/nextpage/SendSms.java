@@ -59,6 +59,8 @@ public class SendSms extends AppCompatActivity {
             }
         });
 
+
+
 //        button Send
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +79,6 @@ public class SendSms extends AppCompatActivity {
             }
         });
     }
-
 
 
     @Override
