@@ -17,6 +17,9 @@ public class MyReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsBroadcastReceiver";
     String msg, phoneNo = "";
 
+    public static String PHONENUM ="com.exampe.nextpage.PHONENUM";
+    public static String MSG  ="com.example.nextpage.MSG";
+
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -44,8 +47,11 @@ public class MyReceiver extends BroadcastReceiver {
                     }
                     msg= message[i].getMessageBody();
                     phoneNo = message[i].getOriginatingAddress();
+                    MSG = message[i].getMessageBody();
+                    PHONENUM = message[i].getOriginatingAddress();
                 }
                 Toast.makeText(context,"Message: "+msg+"\nNumber: "+phoneNo,Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Message: "+MSG+"\nNumber: "+PHONENUM,Toast.LENGTH_LONG).show();
             }
         }
     }

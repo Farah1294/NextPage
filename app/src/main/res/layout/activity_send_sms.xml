@@ -33,7 +33,6 @@
         android:layout_marginTop="300dp"
         android:textSize="20dp"/>
 
-
     <EditText
         android:id="@+id/etSms"
         android:layout_width="372dp"
@@ -46,9 +45,7 @@
         android:inputType="textMultiLine"
         android:textColorHint="#fff"
         android:layout_marginLeft="15dp"
-        android:gravity="start|top"
-
-        />
+        android:gravity="start|top" />
 
     <Button
         android:id="@+id/btnSend"
@@ -67,6 +64,17 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="-55dp"
         android:text="CLEAR"
+        android:textColor="#fff"
+
+        />
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="85dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-55dp"
+        android:text="CONTACT"
         android:textColor="#fff"
 
         />
