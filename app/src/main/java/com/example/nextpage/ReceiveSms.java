@@ -61,7 +61,6 @@ public class ReceiveSms extends AppCompatActivity {
         Intent intent = getIntent();
         String strPhoneNum = intent.getStringExtra(PHONENUM);
         tvPhoneNum.setText(strPhoneNum);
-
         String strMsg = intent.getStringExtra(MSG);
         tvMsg.setText(strMsg);
 
