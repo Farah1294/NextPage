@@ -71,7 +71,7 @@ public class ReceiveSms extends AppCompatActivity {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECEIVE_SMS)) {
                 //Do nothing as user has denied
             } else {
-                //a pop up will appear asking for required permission i.e Allow or Deniy
+                //a pop up will appear asking for required permission i.e Allow or Denied
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECEIVE_SMS}, MY_PERMISSIONS_REQUEST_RECEIVE_SMS);
             }
         }
