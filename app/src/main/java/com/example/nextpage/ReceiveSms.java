@@ -58,20 +58,12 @@ public class ReceiveSms extends AppCompatActivity {
         tvPhoneNum = findViewById(R.id.tvPhoneNum);
         tvMsg= findViewById(R.id.tvMsg);
 
-
         Intent intent = getIntent();
-
         String strPhoneNum = intent.getStringExtra(PHONENUM);
-//        String strPhoneNum2 = intent.getStringExtra(phoneNo);
-        tvPhoneNum = findViewById(R.id.tvPhoneNum);
         tvPhoneNum.setText(strPhoneNum);
-//        tvPhoneNum.setText(strPhoneNum2);
 
         String strMsg = intent.getStringExtra(MSG);
-//        String strMsg2 = intent.getStringExtra(msg);
-        tvMsg = findViewById(R.id.tvMsg);
         tvMsg.setText(strMsg);
-//        tvMsg.setText(strMsg2);
 
 
         //check if permission is not granted
